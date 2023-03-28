@@ -14,6 +14,7 @@ function Persons() {
     const [persons, setPersons] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
     const [personMessage, setPersonMessage] = useState('')
+    const [genalogy, setGenealogy] = useState({});
 
     const location = useLocation()
     let message = ''
@@ -35,8 +36,8 @@ function Persons() {
                     .then((data) => {
                         setPersons(data)
                         setRemoveLoading(true)
-                    })
-                    .catch(error => console.log('error', error)),
+                    }),
+
             1000,
         )
     }, [])
@@ -54,6 +55,7 @@ function Persons() {
                 setPersonMessage('Pessoa removida com sucesso!')
             })
     }
+
 
     return (
         <div className={styles.person_container}>
