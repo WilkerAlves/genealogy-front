@@ -51,7 +51,7 @@ function Persons() {
             .then((resp) => resp.json())
             .then((data) => {
                 setPersons(persons.filter((person) => person.id !== id))
-                setPersonMessage('Pessoal removida com sucesso!')
+                setPersonMessage('Pessoa removida com sucesso!')
             })
     }
 
