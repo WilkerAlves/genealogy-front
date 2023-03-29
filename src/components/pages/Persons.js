@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import {useState, useEffect} from 'react'
+import {useLocation} from 'react-router-dom'
 
 import Container from '../layout/Container'
 import Loading from '../layout/Loading'
@@ -14,7 +14,6 @@ function Persons() {
     const [persons, setPersons] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
     const [personMessage, setPersonMessage] = useState('')
-    const [genalogy, setGenealogy] = useState({});
 
     const location = useLocation()
     let message = ''
@@ -50,7 +49,7 @@ function Persons() {
             },
         })
             .then((resp) => resp.json())
-            .then((data) => {
+            .then(() => {
                 setPersons(persons.filter((person) => person.id !== id))
                 setPersonMessage('Pessoa removida com sucesso!')
             })
@@ -61,10 +60,10 @@ function Persons() {
         <div className={styles.person_container}>
             <div className={styles.title_container}>
                 <h1>Pessoas</h1>
-                <LinkButton to="/newperson" text="Criar pessoa" />
+                <LinkButton to="/newperson" text="Criar pessoa"/>
             </div>
-            {message && <Message type="success" msg={message} />}
-            {personMessage && <Message type="success" msg={personMessage} />}
+            {message && <Message type="success" msg={message}/>}
+            {personMessage && <Message type="success" msg={personMessage}/>}
             <Container customClass="start">
                 {persons.length > 0 &&
                     persons.map((person) => (
@@ -75,7 +74,7 @@ function Persons() {
                             handleRemove={removePerson}
                         />
                     ))}
-                {!removeLoading && <Loading />}
+                {!removeLoading && <Loading/>}
                 {removeLoading && persons.length === 0 && (
                     <p>Não há pessoas cadastradas!</p>
                 )}
