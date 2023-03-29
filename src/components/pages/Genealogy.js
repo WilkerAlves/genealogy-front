@@ -31,7 +31,7 @@ function Genealogy() {
     return (
         <div className={styles.genealogy_container}>
             <div className={styles.title_container}>
-                <h1>Árvore Genealogica</h1>
+                <h1>Árvore Genealógica</h1>
             </div>
 
             <Container customClass="start">
