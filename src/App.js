@@ -6,6 +6,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import NewPerson from "./components/pages/NewPerson";
 import Genealogy from "./components/pages/Genealogy";
+import NewRelationship from "./components/pages/NewRelationship";
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
                   </Route>
                   <Route path="/geanology/:id" >
                       <Genealogy />
+                  </Route>
+                  <Route path="/newrelationship">
+                      <NewRelationship />
                   </Route>
               </Container>
           </Switch>

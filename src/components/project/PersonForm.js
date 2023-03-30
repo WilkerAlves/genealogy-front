@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import {useState} from 'react'
 import Input from '../form/Input'
 import SubmitButton from '../form/SubmitButton'
 
@@ -6,16 +6,6 @@ import styles from './PersonForm.module.css'
 
 function PersonForm({ handleSubmit, btnText, personData }) {
   const [person, setPerson] = useState(personData || {})
-
-  useEffect(() => {
-    fetch('http://localhost:5000/categories', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((resp) => resp.json())
-  }, [])
 
   const submit = (e) => {
     e.preventDefault()

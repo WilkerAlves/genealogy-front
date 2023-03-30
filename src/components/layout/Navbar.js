@@ -18,6 +18,9 @@ function Navbar() {
           <li className={styles.item}>
             <Link to="/geanology">Geanology</Link>
           </li>
+          <li className={styles.item}>
+            <Link to="/newrelationship">Criar Relacionamento</Link>
+          </li>
         </ul>
       </Container>
     </div>
