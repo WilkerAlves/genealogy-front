@@ -36,8 +36,6 @@ function NewRelationship() {
 
     const submit = (e) => {
         e.preventDefault()
-        console.log("submit", relationship)
-        console.log("submitJson", JSON.stringify(relationship))
 
         fetch('http://localhost:8080/relationship/', {
             method: 'POST',
