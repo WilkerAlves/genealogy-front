@@ -21,6 +21,9 @@ function Navbar() {
           <li className={styles.item}>
             <Link to="/newrelationship">Criar Relacionamento</Link>
           </li>
+          <li className={styles.item}>
+            <Link to="/findrelationship">Descobrir Grau de Parentesco</Link>
+          </li>
         </ul>
       </Container>
     </div>

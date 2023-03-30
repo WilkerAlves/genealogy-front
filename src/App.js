@@ -7,6 +7,7 @@ import Footer from "./components/layout/Footer";
 import NewPerson from "./components/pages/NewPerson";
 import Genealogy from "./components/pages/Genealogy";
 import NewRelationship from "./components/pages/NewRelationship";
+import FindRelationship from "./components/pages/FindRelationship";
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
                   </Route>
                   <Route path="/newrelationship">
                       <NewRelationship />
+                  </Route>
+                  <Route path="/findrelationship">
+                      <FindRelationship />
                   </Route>
               </Container>
           </Switch>
